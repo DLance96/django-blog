@@ -5,9 +5,8 @@
 
     {% for post in posts %}
         <div>
-            <h2><a href="">{{ post.title }}</a></h2>
+          <h2><a href="">{{ post.title }}</a></h2>
             <p>published: {{ post.pub_date }}</p>
-            <p><i>{{ post.tags }}</i></p>
             <p>{{ post.text|linebreaks }}</p>
         </div>
     {% endfor %}
