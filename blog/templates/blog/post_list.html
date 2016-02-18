@@ -1,13 +1,16 @@
+<!DOCTYPE html>
 <html>
-    <div>
+    <head>
         <h1><a href="/">David Lance</a></h1>
-    </div>
+    </head>
 
     {% for post in posts %}
         <div>
-          <h2><a href="">{{ post.title }}</a></h2>
+          <h2><a href="{% url 'blog:post' post.id %}">{{ post.title }}</a></h2>
             <p>published: {{ post.pub_date }}</p>
+            <!---
             <p>{{ post.text|linebreaks }}</p>
+            -->
         </div>
     {% endfor %}
 </html>

@@ -7,8 +7,8 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {'posts':posts})
 
 def post(request, post_id):
-    posts = Post.objects.filter(pk=post_id)
-    return render(request, 'blog/post_list.html', {'posts':posts})
+    post = Post.objects.get(pk=post_id)
+    return render(request, 'blog/post.html', {'post':post})
 
 def year_archive(request, year):
     posts = Post.objects.filter(pub_date__year = year).order_by('pub_date')

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1><a href="">David Lance</a></h1>
+  </head>
+  
+  <body>
+    <h2><a href="{% url 'blog:post' post.id %}">{{ post.title }}</a></h2>
+    <p>published: {{ post.pub_date }}</p>
+    <p>{{ post.text|linebreaks }}</p>
+  </body>
+</html>
