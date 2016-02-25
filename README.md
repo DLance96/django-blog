@@ -6,4 +6,4 @@ Basic blog made for personal use.
 
 [Bootstrap 3](http://getbootstrap.com/ "Bootstrap 3") - used along side the below template to create responsive CSS/HTML
 
-[Basic blog template](https://github.com/BlackrockDigital/startbootstrap-clean-blog) - modified to fit what I was looking for.
+[Basic blog template](https://github.com/BlackrockDigital/startbootstrap-clean-blog) - modified to fit what I was looking for
