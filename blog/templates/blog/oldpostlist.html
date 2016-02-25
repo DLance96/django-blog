@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    {% load staticfiles %}
+    <link type="text/css" rel="stylesheet" href="{% static 'blog/stylesheet.css' %}"/>
+    <meta charset="utf-8"/>
+    <title>David Lance | Blog</title>
+  </head>
+  <body>
+    <div>
+      <div> 
+        <h1><a href="{% url 'blog:post_list' %}">David Lance</a></h1>
+        <h2>Blog Description</h2>
+        <h3>Resume</h3>
+        <h3>About</h3>
+      </div>
+    </div>
+    <div>
+      {% for post in posts %}
+        <div>
+          <div>
+            <h2><a href="{% url 'blog:post' post.id %}">{{ post.title }}</a></h2>
+            <p>published: {{ post.pub_date }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
