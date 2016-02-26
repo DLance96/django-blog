@@ -87,6 +87,19 @@
                     <p>{{ post.text|linebreaks }} </p>
                 </div>
             </div>
+            <hr>
+            {% for section in post.section_set.all %}
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h2 class="section-heading">{{ section.title }}</h2>
+                    {% ifnotequal section.img "" %}
+                    <img href="{{ section.img.url }}"/>
+                    {% endifnotequal %}
+                    <p>{{ section.text }}</p>
+                </div>
+            </div>
+            <hr>
+            {% endfor %}
         </div>
     </article>
 
