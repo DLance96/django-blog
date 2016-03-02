@@ -15,6 +15,7 @@ def post_dir_path(instance, filename):
 class Section(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
+    title_url = models.URLField(max_length=200, default="#")
     img = models.ImageField(upload_to=post_dir_path, default="")
     text = models.TextField()
     
