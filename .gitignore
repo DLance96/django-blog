@@ -1,4 +1,4 @@
-ompiled source #
+# Compiled source #
 ###################
 *.com
 *.class
@@ -36,3 +36,5 @@ ompiled source #
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+*.swp
